@@ -1,0 +1,21 @@
+# COBOL + Java Migration Lab
+# Resultados de compilacion y ejecucion
+/work/
+*.class
+*.exe
+*.dll
+*.obj
+*.out
+
+# Herramientas locales y distribuciones descargadas
+/tools/
+
+# Configuracion local de editores
+.idea/
+.vscode/
+
+# Archivos temporales y de sistema
+*.tmp
+*.log
+Thumbs.db
+Desktop.ini
