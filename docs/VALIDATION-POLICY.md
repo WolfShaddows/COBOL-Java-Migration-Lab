@@ -46,3 +46,13 @@ Status: Initial policy approved for the laboratory.
 
 This policy applies to the synthetic laboratory data and tests.
 It does not constitute validation or certification of a production financial system.
+## 7. Input structure and capacity
+
+- CSV files must contain the exact expected header.
+- Nonblank data rows must contain exactly the expected number of nonempty fields.
+- Monetary fields must be integer cents; malformed and out-of-range values are rejected.
+- The laboratory supports at most 100 accounts and 1,000 transactions per run.
+- A valid header-only accounts file is permitted; transactions referencing absent accounts are reported as NO_ACCOUNT.
+- A valid header-only transactions file is permitted and produces final balances without transaction rows.
+- Structural validation and capacity checks must complete before final output is created.
+- Invalid input must return a nonzero exit code and must not leave a newly generated partial result.
